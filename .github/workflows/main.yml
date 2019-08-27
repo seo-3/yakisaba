@@ -39,4 +39,4 @@ jobs:
       env:
         CI: true
     - name: deploy
-      run:go get -u github.com/reviewdog/reviewdog/cmd/reviewdog
+      run: go get -u github.com/reviewdog/reviewdog/cmd/reviewdog
