@@ -34,7 +34,7 @@ jobs:
 #         pytest
     - name: npm install, build, and test
       run: |
-        npm install serverless
+        npm install -g serverless
         npm run build --if-present
         npm test
       env:
