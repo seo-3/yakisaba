@@ -39,8 +39,6 @@ jobs:
       env:
         CI: true
     - name: deploy
-      run: echo $CI |
-        which sls
-
+      run:which sls
       env:
         CI: true
