@@ -38,5 +38,3 @@ jobs:
         npm install serverless-python-requirements
       env:
         CI: true
-    - name: deploy
-      run: go get -u github.com/reviewdog/reviewdog/cmd/reviewdog
