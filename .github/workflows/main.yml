@@ -39,4 +39,4 @@ jobs:
       env:
         CI: true
     - name: deploy
-      run: sls -v
+      run: sh sls -v
