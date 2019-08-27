@@ -35,7 +35,7 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install --save serverless
-        echo 'export PATH="$HOME/sls/node_modules/.bin/:$PATH"' >> ~/.bash_profile
+        which sls
         source ~/.bash_profile
         sls -v
         npm run build --if-present
