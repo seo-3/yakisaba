@@ -39,6 +39,6 @@ jobs:
       env:
         CI: true
     - name: deploy
-      run:which sls
+      run: which sls
       env:
         CI: true
