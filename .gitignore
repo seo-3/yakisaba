@@ -1,9 +1,11 @@
 *.pydevproject
 __pycache__
 *.pyc
+*.pyo
 *.tmp
 *.bak
 *.swp
 *~.nib
 .requirements
 .serverless
+node_modules
