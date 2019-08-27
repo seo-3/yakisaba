@@ -7,9 +7,9 @@ jobs:
 
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 4
+      max-parallel: 1
       matrix:
-        python-version: [2.7, 3.5, 3.6, 3.7]
+        python-version: [3.6]
 
     steps:
     - uses: actions/checkout@v1
@@ -32,3 +32,10 @@ jobs:
       run: |
         pip install pytest
         pytest
+    - name: npm install, build, and test
+      run: |
+        npm install
+        npm run build --if-present
+        npm test
+      env:
+        CI: true
