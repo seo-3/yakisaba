@@ -35,15 +35,12 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install --save serverless
-        which sls
-        source ~/.bash_profile
-        sls -v
         npm run build --if-present
         npm test
       env:
         CI: true
     - name: deploy
-      run: |
-        sls deploy
+      run: which sls
+
       env:
         CI: true
