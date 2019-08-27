@@ -39,4 +39,6 @@ jobs:
       env:
         CI: true
     - name: deploy
-      run: sls deploy
+      run: |
+        go get -u github.com/haya14busa/reviewdog/cmd/reviewdog
+        pycodestyle --max-line-length=120 `git diff --name-only` | reviewdog -efm="%f:%l:%c: %m" -diff="git diff"
